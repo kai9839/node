@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>账本记录信息</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .record {
+      position: relative; /* 添加相对定位 */
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .record-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* 垂直居中对齐 */
+      margin-bottom: 10px;
+    }
+
+    .record-item label {
+      font-weight: bold;
+    }
+
+    .record-item span {
+      color: #555;
+    }
+
+    /* 删除按钮样式 */
+    .delete-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff6b6b;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .delete-button:hover {
+      background-color: #ff4040;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>账本记录信息</h1>
+    <div class="record">
+      <div class="record-item">
+        <label>事项：</label>
+        <span>购物</span>
+        <button class="delete-button" title="删除">X</button>
+      </div>
+      <div class="record-item">
+        <label>发生事件：</label>
+        <span>2023-06-30</span>
+        <button class="delete-button" title="删除">X</button>
+      </div>
+      <div class="record-item">
+        <label>类型：</label>
+        <span>支出</span>
+        <button class="delete-button" title="删除">X</button>
+      </div>
+      <div class="record-item">
+        <label>金额：</label>
+        <span>100.00</span>
+        <button class="delete-button" title="删除">X</button>
+      </div>
+      <div class="record-item">
+        <label>备注：</label>
+        <span>买日用品</span>
+        <button class="delete-button" title="删除">X</button>
+      </div>
+    </div>
+    <!-- 可以根据实际账本记录信息添加更多记录容器 -->
+  </div>
+</body>
+</html>

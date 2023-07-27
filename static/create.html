@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>添加账本记录</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 400px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 0; /* 取消 h1 的默认上边距 */
+      margin-bottom: 20px; /* 添加下边距，增加与表单的间距 */
+    }
+
+      form {
+        width: 400px;
+        padding: 60px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        /* background: url('data:image/svg+xml;utf8,<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.25 10.75L12 15.5l4.75-4.75L18 12.25l-6 6-6-6z" fill="#222"/></svg>')
+          no-repeat right 8px center; */
+        background-size: 16px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>添加账本记录</h1>
+      <form>
+        <label for="item">事项：</label>
+        <input type="text" id="item" name="item" required />
+
+        <label for="date">发生事件：</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="type">类型：</label>
+        <select id="type" name="type" required>
+          <option value="expense">支出</option>
+          <option value="income">收入</option>
+        </select>
+
+        <label for="amount">金额：</label>
+        <input type="number" id="amount" name="amount" required />
+
+        <label for="note">备注：</label>
+        <textarea id="note" name="note" rows="4"></textarea>
+
+        <button type="submit">保存</button>
+      </form>
+    </div>
+  </body>
+</html>
